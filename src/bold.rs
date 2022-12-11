@@ -57,10 +57,10 @@ pub trait BoldTrait {
     ///
     /// # Example
     /// ```rust
-    /// use qrcode::bold::BoldTrait;
-    /// use qrcode::bold::BoldOption;
-    /// use qrcode::bold::CodeOption;
-    /// use qrcode::bold::OutputType;
+    /// use qr_bold::bold::BoldTrait;
+    /// use qr_bold::bold::BoldOption;
+    /// use qr_bold::bold::CodeOption;
+    /// use qr_bold::bold::OutputType;
     ///
     /// let option = BoldOption {
     ///     module_size: 3,
@@ -101,8 +101,8 @@ impl BoldTrait for Bold {
     /// # Example
     ///
     /// ```rust
-    /// use qrcode::bold::BoldTrait;
-    /// use qrcode::bold::BoldOption;
+    /// use qr_bold::bold::BoldTrait;
+    /// use qr_bold::bold::BoldOption;
     ///
     /// let option = BoldOption {
     ///     module_size: 3,
@@ -129,10 +129,10 @@ impl BoldTrait for Bold {
     /// # Example
     ///
     /// ```rust
-    /// use qrcode::bold::BoldTrait;
-    /// use qrcode::bold::BoldOption;
-    /// use qrcode::bold::CodeOption;
-    /// use qrcode::bold::OutputType;
+    /// use qr_bold::bold::BoldTrait;
+    /// use qr_bold::bold::BoldOption;
+    /// use qr_bold::bold::CodeOption;
+    /// use qr_bold::bold::OutputType;
     ///
     /// let option = BoldOption {
     ///     module_size: 3,
@@ -168,8 +168,8 @@ impl Bold {
     /// # Example
     ///
     /// ```rust
-    /// use qrcode::bold::Bold;
-    /// use qrcode::bold::BoldOption;
+    /// use qr_bold::bold::Bold;
+    /// use qr_bold::bold::BoldOption;
     ///
     /// let option = BoldOption {
     ///     module_size: 3,
