@@ -42,9 +42,6 @@ pub enum OutputType {
 
 /// Interface for Bold generator
 pub trait BoldTrait {
-    /// Create new instance of Bold generator
-    fn new(option: BoldOption) -> Self;
-
     /// Generate the QR code
     ///
     /// # Arguments
@@ -92,32 +89,6 @@ pub struct Bold {
 }
 
 impl BoldTrait for Bold {
-    /// Create new instance of Bold generator
-    ///
-    /// # Arguments
-    ///
-    /// * `option` - The option for the generator
-    ///
-    /// # Example
-    ///
-    /// ```rust
-    /// use qr_bold::bold::BoldTrait;
-    /// use qr_bold::bold::BoldOption;
-    ///
-    /// let option = BoldOption {
-    ///     module_size: 3,
-    ///     quiet_zone: 4,
-    ///     foreground: "000000".to_string(),
-    ///     background: "FFFFFF".to_string(),
-    /// }
-    ///
-    /// let bold = BoldTrait::new(option);
-    /// ```
-    ///
-    fn new(option: BoldOption) -> Self {
-        Bold { option }
-    }
-
     /// Generate the QR code
     ///
     /// # Arguments
@@ -131,6 +102,7 @@ impl BoldTrait for Bold {
     /// # Example
     ///
     /// ```rust
+    /// use qr_bold::bold::Bold;
     /// use qr_bold::bold::BoldTrait;
     /// use qr_bold::bold::BoldOption;
     /// use qr_bold::bold::CodeOption;
@@ -149,18 +121,47 @@ impl BoldTrait for Bold {
     ///     output_type: OutputType::PNG,
     /// };
     ///
-    /// let bold = BoldTrait::new(option);
+    /// let bold = Bold::new(option);
     /// bold.generate(code_option, None);
+    ///
+    /// ```
+    ///
     fn generate(
         &self,
-        code_option: CodeOption,
-        option: Option<BoldOption>,
+        _code_option: CodeOption,
+        _option: Option<BoldOption>,
     ) -> Result<(), Box<dyn Error>> {
         return Ok(());
     }
 }
 
 impl Bold {
+    /// Create new instance of Bold generator
+    ///
+    /// # Arguments
+    ///
+    /// * `option` - The option for the generator
+    ///
+    /// # Example
+    ///
+    /// ```rust
+    /// use qr_bold::bold::Bold;
+    /// use qr_bold::bold::BoldOption;
+    ///
+    /// let option = BoldOption {
+    ///     module_size: 3,
+    ///     quiet_zone: 4,
+    ///     foreground: "000000".to_string(),
+    ///     background: "FFFFFF".to_string(),
+    /// };
+    ///
+    /// let option = Bold::new(option);
+    /// ```
+    ///
+    pub fn new(option: BoldOption) -> Self {
+        Bold { option }
+    }
+
     /// Get the option of the Bold generator
     ///
     /// # Return
