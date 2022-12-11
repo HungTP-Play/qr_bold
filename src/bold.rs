@@ -112,6 +112,8 @@ impl BoldTrait for Bold {
     /// }
     ///
     /// let bold = BoldTrait::new(option);
+    /// ```
+    ///
     fn new(option: BoldOption) -> Self {
         Bold { option }
     }
