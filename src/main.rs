@@ -1,3 +1,4 @@
+use qr_bold::qr;
 fn main() {
-    println!("Hello, world!");
+    qr::hello_qr();
 }
